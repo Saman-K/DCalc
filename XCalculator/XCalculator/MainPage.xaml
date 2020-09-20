@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DCalc.MainPage">
+    <!--<ContentPage.ToolbarItems BackgroundColor="#888888">
+        <ToolbarItem x:Name="about" Text="Learn more"
+                        Clicked="BtnAbout_ClickAsync"/>
+    </ContentPage.ToolbarItems>-->
+
+    <StackLayout VerticalOptions="FillAndExpand" BackgroundColor="#888888">
+        <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+            <Label Text="DCalc" FontSize="20" Padding="10,5,10,0" HorizontalOptions="Start" TextColor="#222222">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="BtnAbout_ClickAsync"/>
+                </Label.GestureRecognizers>
+            </Label>
+        </StackLayout>
+        
+        <Label x:Name="Editor" Text="0" FontSize="62" Padding="30,-20,20,0" HorizontalOptions="EndAndExpand" TextColor="#222222"/>
+        <Label x:Name="LiveResult" FontSize="35" Padding="10,0,10,0" HorizontalOptions="End" TextColor="#222222"/>
+        <Label x:Name="LiveResultOprator" FontSize="35" Padding="10,0,10,0" HorizontalOptions="End" TextColor="#222222"/>
+
+        <StackLayout Padding="5,5,5,5" VerticalOptions="FillAndExpand">
+            <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" >
+                <StackLayout Orientation="Vertical" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+                    <StackLayout Orientation="Horizontal" VerticalOptions="FillAndExpand">
+                        <Button x:Name="Btn1" Clicked="Button_Click" Text="1" HorizontalOptions="FillAndExpand" BackgroundColor="#222222" TextColor="#888888" FontSize="60"></Button>
+                        <Button x:Name="Btn2" Clicked="Button_Click" Text="2" HorizontalOptions="FillAndExpand" BackgroundColor="#222222" TextColor="#888888" FontSize="60"></Button>
+                        <Button x:Name="Btn3" Clicked="Button_Click" Text="3" HorizontalOptions="FillAndExpand" BackgroundColor="#222222" TextColor="#888888" FontSize="60"></Button>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal" VerticalOptions="FillAndExpand">
+                        <Button x:Name="Btn4" Clicked="Button_Click" Text="4" HorizontalOptions="FillAndExpand" BackgroundColor="#222222" TextColor="#888888" FontSize="60"></Button>
+                        <Button x:Name="Btn5" Clicked="Button_Click" Text="5" HorizontalOptions="FillAndExpand" BackgroundColor="#222222" TextColor="#888888" FontSize="60"></Button>
+                        <Button x:Name="Btn6" Clicked="Button_Click" Text="6" HorizontalOptions="FillAndExpand" BackgroundColor="#222222" TextColor="#888888" FontSize="60"></Button>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal" VerticalOptions="FillAndExpand">
+                        <Button x:Name="Btn7" Clicked="Button_Click" Text="7" HorizontalOptions="FillAndExpand" BackgroundColor="#222222" TextColor="#888888" FontSize="60"></Button>
+                        <Button x:Name="Btn8" Clicked="Button_Click" Text="8" HorizontalOptions="FillAndExpand" BackgroundColor="#222222" TextColor="#888888" FontSize="60"></Button>
+                        <Button x:Name="Btn9" Clicked="Button_Click" Text="9" HorizontalOptions="FillAndExpand" BackgroundColor="#222222" TextColor="#888888" FontSize="60"></Button>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal" VerticalOptions="FillAndExpand">
+                        <Button x:Name="BtnPeriod" Clicked="Button_Click" Text="." HorizontalOptions="FillAndExpand" BackgroundColor="#444444" TextColor="#888888" FontSize="60"></Button>
+                        <Button x:Name="Btn0" Clicked="Button_Click" Text="0" HorizontalOptions="FillAndExpand" BackgroundColor="#222222" TextColor="#888888" FontSize="60"></Button>
+                        <Button x:Name="BtnEqual" Clicked="Operator_Click" Text="=" HorizontalOptions="FillAndExpand" BackgroundColor="#444444" TextColor="#888888" FontSize="60"></Button>
+                    </StackLayout>
+                </StackLayout>
+
+                <StackLayout Orientation="Vertical" HorizontalOptions="Center" VerticalOptions="FillAndExpand">
+                    <StackLayout Orientation="Vertical" HorizontalOptions="Center" VerticalOptions="FillAndExpand">
+                        <Button x:Name="BtnDelete" Clicked="BtnClearEntry_Click" Text="CE" VerticalOptions="FillAndExpand" BackgroundColor="#580000" TextColor="#888888" FontSize="25"></Button>
+                        <Button x:Name="BtnClean" Clicked="BtnClear_Click" Text="C" VerticalOptions="FillAndExpand" BackgroundColor="#444444" TextColor="#888888" FontSize="25"></Button>
+                    </StackLayout>
+                    <Button x:Name="BtnDivide" Clicked="Operator_Click" Text="÷" VerticalOptions="FillAndExpand" BackgroundColor="#444444" TextColor="#888888" FontSize="40"></Button>
+                    <Button x:Name="BtnMultiply" Clicked="Operator_Click" Text="×" VerticalOptions="FillAndExpand" BackgroundColor="#444444" TextColor="#888888" FontSize="40"></Button>
+                    <Button x:Name="BtnMinus" Clicked="Operator_Click" Text="+" VerticalOptions="FillAndExpand" BackgroundColor="#444444" TextColor="#888888" FontSize="40"></Button>
+                    <Button x:Name="BtnPlus" Clicked="Operator_Click" Text="-" VerticalOptions="FillAndExpand" BackgroundColor="#444444" TextColor="#888888" FontSize="40"></Button>
+                </StackLayout>
+
+            </StackLayout>
+        </StackLayout>
+    </StackLayout>
+
+</ContentPage>
