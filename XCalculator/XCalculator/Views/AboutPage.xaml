@@ -2,16 +2,54 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="DCalc.Views.AboutPage">
-    <ContentPage.Content>
-        <StackLayout BackgroundColor="#666666" >
-            <Label Text="Back" FontSize="20" Padding="10,5,10,0" HorizontalOptions="Center" TextColor="#222222">
-                <Label.GestureRecognizers>
+    <ContentPage.Content >
+        <StackLayout BackgroundColor="#222222">
+            <Image Source="X_666666.png" HorizontalOptions="Start">
+                <Image.GestureRecognizers>
                     <TapGestureRecognizer Tapped="BtnMain_ClickAsync"/>
-                </Label.GestureRecognizers>
-            </Label>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+                </Image.GestureRecognizers>
+            </Image>
+            <StackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" Padding="10,10,10,10">
+                <StackLayout>
+                    <Image Source="DCalc_Light.png"/>
+                </StackLayout>
+                <StackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" Padding="10,10,10,10">
+                    <Label Text="DCalc" FontSize="Large" TextColor="#888888"/>
+                </StackLayout>
+                <StackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" Padding="10,10,10,10">
+                    <Label Text="This is a simple to use calculator with a dark theme. This was developed in Xamarin.Form as a multi-platform app. Developed by Saman.K." FontSize="Large" TextColor="#888888"/>
+                </StackLayout>
+                <StackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" Padding="10,10,10,10">
+                    <Label Text="Developed by Saman.K." FontSize="Large" TextColor="#888888"/>
+                </StackLayout>
+                <StackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" Padding="10,10,10,10">
+                    <Label FontSize="Large" TextColor="#888888">
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span Text="Website: " />
+                                <Span Text="SamanK.me"  TextDecorations="Underline" TextColor="White">
+                                    <Span.GestureRecognizers>
+                                        <TapGestureRecognizer  Tapped="Website_Click"/>
+                                    </Span.GestureRecognizers>
+                                </Span>
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+                    <Label FontSize="Large" TextColor="#888888">
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span Text="Github.com/" />
+                                <Span Text="Saman-K"  TextDecorations="Underline" TextColor="White">
+                                    <Span.GestureRecognizers>
+                                        <TapGestureRecognizer  Tapped="Github_click"/>
+                                    </Span.GestureRecognizers>
+                                </Span>
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+                </StackLayout>
+
+            </StackLayout>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

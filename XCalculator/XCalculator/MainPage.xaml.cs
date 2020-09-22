@@ -15,7 +15,7 @@ namespace DCalc
             InitializeComponent();
             NavigationPage.SetHasNavigationBar(this, false);
         }
-
+        // Value button
         private void Button_Click(object sender, EventArgs e)
         {
             var button = (Button)sender;
@@ -37,7 +37,7 @@ namespace DCalc
                 Editor.Text = Editor.Text + button.Text;
             }
         }
-
+        // Operator button
         private void Operator_Click(object sender, EventArgs e)
         {
             var button = (Button)sender;
@@ -117,7 +117,7 @@ namespace DCalc
             LiveResultOprator.Text = resultValue + " " + oprationPerformed;
             LiveResult.Text = lastresultValue.ToString();
         }
-
+        // Cleans the entry 
         private void BtnClearEntry_Click(object sender, EventArgs e)
         {
             Editor.Text = "0";
@@ -127,12 +127,12 @@ namespace DCalc
             LiveResult.Text = "";
             oprationPerformed = "";
         }
-
+        // Cleans edit able section 
         private void BtnClear_Click(object sender, EventArgs e)
         {
             Editor.Text = "0";
         }
-
+        // Opens About page 
         private async void BtnAbout_ClickAsync(object sender, EventArgs e)
         {
             await Navigation.PushModalAsync(new AboutPage());

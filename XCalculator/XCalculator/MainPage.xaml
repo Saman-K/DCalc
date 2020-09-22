@@ -7,18 +7,18 @@
                         Clicked="BtnAbout_ClickAsync"/>
     </ContentPage.ToolbarItems>-->
 
-    <StackLayout VerticalOptions="FillAndExpand" BackgroundColor="#888888">
+    <StackLayout VerticalOptions="FillAndExpand" BackgroundColor="#333333">
         <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
-            <Label Text="DCalc" FontSize="20" Padding="10,5,10,0" HorizontalOptions="Start" TextColor="#222222">
-                <Label.GestureRecognizers>
+            <Image Source="Plus_666666.png">
+                <Image.GestureRecognizers>
                     <TapGestureRecognizer Tapped="BtnAbout_ClickAsync"/>
-                </Label.GestureRecognizers>
-            </Label>
+                </Image.GestureRecognizers>
+            </Image>
         </StackLayout>
         
-        <Label x:Name="Editor" Text="0" FontSize="62" Padding="30,-20,20,0" HorizontalOptions="EndAndExpand" TextColor="#222222"/>
-        <Label x:Name="LiveResult" FontSize="35" Padding="10,0,10,0" HorizontalOptions="End" TextColor="#222222"/>
-        <Label x:Name="LiveResultOprator" FontSize="35" Padding="10,0,10,0" HorizontalOptions="End" TextColor="#222222"/>
+        <Label x:Name="Editor" Text="0" FontSize="62" Padding="30,-15,20,0" HorizontalOptions="EndAndExpand" TextColor="#888888"/>
+        <Label x:Name="LiveResult" FontSize="35" Padding="10,0,10,0" HorizontalOptions="End" TextColor="#666666"/>
+        <Label x:Name="LiveResultOprator" FontSize="35" Padding="10,0,10,0" HorizontalOptions="End" TextColor="#666666"/>
 
         <StackLayout Padding="5,5,5,5" VerticalOptions="FillAndExpand">
             <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" >
